@@ -29,6 +29,55 @@
         <h2>Components</h2>
 
         <section>
+            <h3>Dropdown</h3>
+
+            <div class="g-dropdown">
+                <button class="g-dropdown__toggle g-button g-button--icon-after">
+                    Dropdown <i class="uil uil-angle-down"></i>
+                </button>
+                <div class="g-dropdown__content">
+                    <div class="g-p-1">
+                        Dropdown content
+                    </div>
+                </div>
+            </div>
+
+            <div class="g-dropdown">
+                <button class="g-dropdown__toggle g-button g-button--icon-after">
+                    Dropdown <i class="uil uil-angle-down"></i>
+                </button>
+                <div class="g-dropdown__content">
+                    <div class="g-dropdown__item">Dropdown content</div>
+                    <div class="g-dropdown__item">Dropdown content</div>
+                    <div class="g-dropdown__item">Dropdown content</div>
+                </div>
+            </div>
+
+            <div class="g-dropdown">
+                <button class="g-dropdown__toggle g-button g-button--icon-after">
+                    Dropdown <i class="uil uil-angle-down"></i>
+                </button>
+                <div class="g-dropdown__content">
+                    <div class="g-dropdown__item"><i class="uil uil-cloud-download"></i> Dropdown content</div>
+                    <div class="g-dropdown__item"><i class="uil uil-cloud-download"></i> Dropdown content</div>
+                    <div class="g-dropdown__item"><i class="uil uil-cloud-download"></i> Dropdown content</div>
+                </div>
+            </div>
+
+            <div class="g-dropdown">
+                <button class="g-dropdown__toggle g-button g-button--icon-after">
+                    Dropdown <i class="uil uil-angle-down"></i>
+                </button>
+                <div class="g-dropdown__content">
+                    <div class="g-dropdown__item g-dropdown__item--icon-after">Dropdown content <i class="uil uil-cloud-download"></i></div>
+                    <div class="g-dropdown__item g-dropdown__item--icon-after">Dropdown content <i class="uil uil-cloud-download"></i></div>
+                    <div class="g-dropdown__item g-dropdown__item--icon-after">Dropdown content <i class="uil uil-cloud-download"></i></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
             <h3>Progress</h3>
             <div class="codePreview">
 <progress class="g-progress"></progress>
@@ -119,6 +168,10 @@
 
             <div class="codePreview">
             <?php include("templates/components/tables/table-striped.php");?>
+            </div>
+
+            <div class="codePreview">
+            <?php include("templates/components/tables/table-columns.php");?>
             </div>
         </section>
 

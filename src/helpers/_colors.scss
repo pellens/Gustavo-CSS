@@ -3,7 +3,7 @@
     &-color {
         @each $a, $b, $c in $colors {
             &--#{$a} {
-                color: var(--color--#{$a});
+                color: var(--color-#{$a});
             }
         }
     }

@@ -1,4 +1,4 @@
-<table class="g-table g-table--striped">
+<table class="g-table g-table--columns">
     <thead>
         <th>Cellheader</th>
         <th>Cellheader</th>
