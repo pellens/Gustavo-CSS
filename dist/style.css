@@ -762,6 +762,33 @@ input[type=reset]:hover {
   background-color: #DDD;
 }
 
+.g-table {
+  border: 1px solid var(--color-border);
+  background-color: #FFF;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.g-table tr td, .g-table tr th {
+  border: 1px solid var(--color-border);
+  padding: 1rem;
+}
+.g-table tr:hover {
+  background-color: var(--color-default);
+}
+.g-table thead th {
+  text-align: left;
+}
+.g-table--striped {
+  border: 0;
+}
+.g-table--striped tr td, .g-table--striped tr th {
+  border-left: 0;
+  border-right: 0;
+}
+
 .g-tag {
   height: var(--tag-size-default);
   font-size: 0.75rem;

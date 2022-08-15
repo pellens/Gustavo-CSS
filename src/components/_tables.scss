@@ -1,5 +1,44 @@
 .g {
     &-table {
-        
+        border: 1px solid var(--color-border);
+        background-color: #FFF;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border-spacing: 0;
+        border-collapse: collapse;
+
+        tr {
+            td, th {
+                border: 1px solid var(--color-border);
+                padding: 1rem;
+            }
+
+            &:hover {
+                background-color: var(--color-default);
+            }
+        }
+
+        thead {
+            th {
+                text-align: left;
+            }
+        }
+
+        tfoot {
+            td {
+            }
+        }
+
+        &--striped {
+            border: 0;
+
+            tr {
+                td, th {
+                    border-left: 0;
+                    border-right: 0;
+                }
+            }
+        }
     }
 }

@@ -111,11 +111,23 @@
         </section>
 
         <section>
-            <h3>Modal</h3>
+            <h3>Tables</h3>
+            
+            <div class="codePreview">
+            <?php include("templates/components/tables/table.php");?>
+            </div>
 
             <div class="codePreview">
-                <?php include("templates/components/modals/modal.php");?>
+            <?php include("templates/components/tables/table-striped.php");?>
             </div>
+        </section>
+
+        <section>
+            <h3>Modal</h3>
+
+            <!--<div class="codePreview">
+                <?php include("templates/components/modals/modal.php");?>
+            </div>-->
 
             <div class="codePreview">
                 <!--
