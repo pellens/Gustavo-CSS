@@ -63,6 +63,10 @@ $colors:
         --button-text-color-#{$title}-outline: #{$alt};
     }
 
+    /* Modals */
+    --modal-backdrop: rgba(0,0,0,.3);
+    --modal-background: #FFF;
+    --modal-border-radius: 8px;
         
     --text-color: #000;
     --text-color-placeholder: #CCC;
@@ -79,6 +83,8 @@ $colors:
     position: relative;
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -93,6 +99,8 @@ body {
     background-color: var(--body-background);
     color: var(--text-color);
     font-family: var(--font-family);
+    margin : 0;
+    padding: 0;
 }
 
 @import url("https://unicons.iconscout.com/release/v4.0.0/css/line.css");

@@ -11,7 +11,9 @@
 icon-after
 icon-only
 
+## Install
 
+`https://cdn.jsdelivr.net/gh/pellens/Gustavo-CSS@main/dist/style.min.css`
 
 ## Getting started
 
