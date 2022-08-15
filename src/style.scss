@@ -1,0 +1,116 @@
+@use "sass:math";
+
+$sizes:
+    "tiny" 2,
+    "small" 2.5,
+    "default" 3,
+    "big" 3.5,
+    "huge" 4;
+
+$sizesProgress:
+    "tiny" .25,
+    "small" .5,
+    "default" 1,
+    "big" 1.5,
+    "huge" 2;
+
+$sizesTags:
+    "tiny" 1.25,
+    "small" 1.5,
+    "default" 1.75,
+    "big" 2,
+    "huge" 2.25;
+
+$colors:
+    "default" #e9f0f6 #333 #333,
+    "primary" #3a6adc #FFF #3a6adc,
+    "secondary" #333 #FFF #333,
+    "error" #eb4747 #FFF #eb4747,
+    "success" #52ba52 #FFF #52ba52,
+    "warning" #ff8f00 #FFF #ff8f00,
+    "border" #DDD #333 #333;
+
+:root,
+::before,
+::after {
+    --font-size: 14px;
+    --icon-size: 1.25rem;
+    --font-family: 'Poppins', sans-serif;
+    --body-background: #FFF;
+    --border-radius: 8px;
+
+    /* Colors */
+    @each $title, $bg, $text in $colors {
+        --color-#{$title}: #{$bg};
+    }
+
+    /* Progress */
+    --progress-border-radius: 2px;
+    @each $title, $size in $sizesProgress {
+        --progress-size-#{$title}: #{$size}rem;
+    }
+
+    /* Tags */
+    --tag-border-radius: 2rem 8px 8px 2rem;
+    @each $title, $size in $sizesTags {
+        --tag-size-#{$title}: #{$size}rem;
+    }
+
+    /* Buttons */
+    --button-border-radius: 4px;
+    @each $title, $bg, $text, $alt in $colors {
+        --button-text-color-#{$title}: #{$text};
+        --button-text-color-#{$title}-outline: #{$alt};
+    }
+
+        
+    --text-color: #000;
+    --text-color-placeholder: #CCC;
+}
+
+[data-theme='dark'] {
+    --body-background: #111;
+    --text-color: #FFF;
+
+    --color-border: #333;
+}
+
+* {
+    position: relative;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+}
+
+html {
+    font-size: var(--font-size);
+
+    --text-color-normal: #0a244d;
+    --text-color-light: #8cabd9;
+  }
+
+/* General */
+body {
+    background-color: var(--body-background);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+@import url("https://unicons.iconscout.com/release/v4.0.0/css/line.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* Helpers */
+@import "helpers/colors";
+@import "helpers/display";
+@import "helpers/align";
+@import "helpers/width";
+
+/* Components */
+@import "components/buttons";
+@import "components/tabs";
+@import "components/progress";
+@import "components/toast";
+@import "components/tables";
+@import "components/form";
+@import "components/tags";
+@import "components/links";
+@import "components/modals";

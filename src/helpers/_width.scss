@@ -1,0 +1,7 @@
+.g {
+   /* Width */
+    $widths: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50,100;
+    @each $size in $widths {
+        &-w-#{$size} { width: #{$size}+'%'; }
+    }
+}

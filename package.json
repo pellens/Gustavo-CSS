@@ -1,0 +1,26 @@
+{
+  "name": "gustavo-css",
+  "version": "1.0.0",
+  "description": "CSS only framework",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run php\" \"npm run sass\" \"npm run sync\"",
+    "php": "php -S localhost:8008",
+    "sass": "sass --watch src/style.scss:dist/style.css",
+    "sync": "browser-sync start --proxy 'localhost:8008' --files ['src/*.css', 'docs/*']"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/gert.pellens/gustavo-css.git"
+  },
+  "author": "Gert Pellens",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/gert.pellens/gustavo-css/issues"
+  },
+  "homepage": "https://gitlab.com/gert.pellens/gustavo-css#readme",
+  "dependencies": {
+    "concurrently": "^7.3.0",
+    "sass": "^1.54.4"
+  }
+}

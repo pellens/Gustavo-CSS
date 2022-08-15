@@ -1,0 +1,19 @@
+.g-link {
+    vertical-align: middle;
+    text-decoration: underline;
+    color: var(--color-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+        font-size: var(--icon-size);
+        margin: 0 .25rem;
+    }
+
+    @each $title, $bg, $txt in $colors {
+        &--#{$title} {
+            color: var(--color-#{$title});
+        }
+    }
+}

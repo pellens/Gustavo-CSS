@@ -1,0 +1,10 @@
+.g {
+
+    &-color {
+        @each $a, $b, $c in $colors {
+            &--#{$a} {
+                color: var(--color--#{$a});
+            }
+        }
+    }
+}
