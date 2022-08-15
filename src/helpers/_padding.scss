@@ -1,0 +1,19 @@
+.g {
+    @each $dir, $short in $spacingDirs {
+        &-p {
+            @each $size in $spacingSizes {
+                &-#{$size} {
+                    padding: #{$size}rem;
+                }
+            }
+
+            &-#{$short} {
+                @each $size in $spacingSizes {
+                    &-#{$size} {
+                        padding-#{$dir}: #{$size}rem;
+                    }
+                }
+            }
+        }
+    }
+}

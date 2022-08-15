@@ -13,7 +13,7 @@ icon-only
 
 ## Install
 
-`https://cdn.jsdelivr.net/gh/pellens/Gustavo-CSS@main/dist/style.min.css`
+`https://cdn.jsdelivr.net/gh/pellens/Gustavo-CSS/dist/style.css`
 
 ## Getting started
 

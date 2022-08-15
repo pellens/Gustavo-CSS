@@ -1,5 +1,12 @@
 @use "sass:math";
 
+$spacingSizes: 1,2,3,4,5;
+$spacingDirs:
+    "top" "t",
+    "right" "r",
+    "bottom" "b",
+    "left" "l";
+
 $sizes:
     "tiny" 2,
     "small" 2.5,
@@ -33,6 +40,7 @@ $colors:
 :root,
 ::before,
 ::after {
+    /* General */
     --font-size: 14px;
     --icon-size: 1.25rem;
     --font-family: 'Poppins', sans-serif;
@@ -67,7 +75,8 @@ $colors:
     --modal-backdrop: rgba(0,0,0,.3);
     --modal-background: #FFF;
     --modal-border-radius: 8px;
-        
+    
+    /* Text */
     --text-color: #000;
     --text-color-placeholder: #CCC;
 }
@@ -111,6 +120,8 @@ body {
 @import "helpers/display";
 @import "helpers/align";
 @import "helpers/width";
+@import "helpers/margin";
+@import "helpers/padding";
 
 /* Components */
 @import "components/buttons";
