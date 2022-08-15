@@ -36,9 +36,14 @@
                     Dropdown <i class="uil uil-angle-down"></i>
                 </button>
                 <div class="g-dropdown__content">
-                    <div class="g-p-1">
-                        Dropdown content
+                        
+                    <div class="g-message g-text-center">
+                        <div class="g-message__icon">🤯</div>
+                        <div class="g-message__title">Nothing here</div>
+                        <div class="g-message__content">You didn't add anything yet.</div>
+                        <div class="g-message__action"><button class="g-button g-button--primary">Add something</button></div>
                     </div>
+
                 </div>
             </div>
 
@@ -160,6 +165,44 @@
         </section>
 
         <section>
+            <h3>Toasts</h3>
+        </section>
+
+        <section>
+            <h3>Messages</h3>
+
+            <div class="codePreview">
+                
+                <div class="g-message"><div class="g-message__content">This is a message</div></div>
+                <div class="g-message g-message--default"><div class="message__content">This is a message</div></div>
+                <div class="g-message g-message--primary"><div class="message__content">This is a message</div></div>
+                <div class="g-message g-message--secondary"><div class="message__content">This is a message</div></div>
+                <div class="g-message g-message--success"><div class="message__content"><i class="uil uil-check"></i> This is a message</div></div>
+                <div class="g-message g-message--warning"><div class="message__content">This is a message</div></div>
+                <div class="g-message g-message--error"><div class="message__content">This is a message</div></div>
+        </div>
+
+        <div class="codePreview">
+                <div class="g-message g-text-center">
+                    <div class="g-message__icon">🤯</div>
+                    <div class="g-message__title">Nothing here</div>
+                    <div class="g-message__content">You didn't add anything yet.</div>
+                    <div class="g-message__action"><button class="g-button g-button--primary">Add something</button></div>
+                </div>
+
+        </div>
+        <div class="codePreview">
+
+                <div class="g-message g-text-center">
+                    <div class="g-message__icon"><i class="uil uil-battery-empty g-color--error"></i></div>
+                    <div class="g-message__title">Almost empty!</div>
+                    <div class="g-message__content">You better start charging!</div>
+                </div>
+        </div>
+
+        </section>
+
+        <section>
             <h3>Tables</h3>
             
             <div class="codePreview">
@@ -235,6 +278,18 @@
 </div>
 
 <div class="codePreview">
+<nav class="g-tabs">
+    <ul>
+        <a href="#" class="g-tabs__item g-tabs__item--active">Tabname</a>
+        <a href="#" class="g-tabs__item">Tabname</a>
+        <a href="#" class="g-tabs__item">Tabname</a>
+        <a href="#" class="g-tabs__item">Tabname</a>
+        <a href="#" class="g-tabs__item">Tabname</a>
+    </ul>
+</nav>
+</div>
+
+<div class="codePreview">
 <nav class="g-tabs g-tabs--end">
     <ul>
         <li class="g-tabs__item g-color--error"><i class="uil uil-folder"></i> Tabname</li>
@@ -267,7 +322,7 @@
         <li class="g-tabs__item g-tabs__item--icon-only"><i class="uil uil-folder"></i></li>
         <li class="g-tabs__item g-tabs__item--icon-only"><i class="uil uil-folder"></i></li>
 
-        <li class="g-tabs__item"><button class="g-button g-button--primary g-button--tiny">Button</button></li>
+        <li class="g-tabs__item"><button class="g-button g-button--primary g-button--small">Button</button></li>
     </ul>
 </nav>
             </div>
