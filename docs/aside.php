@@ -14,15 +14,18 @@
     <h3>Links</h3>
     <ul>
         <li><a href="#links">Default</a></li>
-        <li><a href="#link-icon">Icon links</a></li>
+        <li><a href="#links-icon">Icon links</a></li>
     </ul>
 
     <h3>Forms</h3>
     <ul>
-        <li><a href="#forms">Default</a></li>
-        <li><a href="#forms-date">Form time & date</a></li>
+        <!--<li><a href="#forms">Default</a></li>
+        <li><a href="#forms-date">Form time & date</a></li>-->
+        
+        <li><a href="#forms-radio">Radiobutton</a></li>
+        <li><a href="#forms-radio-label">Radiobutton width label</a></li>
         <li><a href="#forms-checkbox">Checkbox</a></li>
-        <li><a href="#forms-radio">Radio</a></li>
+        <li><a href="#forms-checkbox-label">Checkbox width label</a></li>
         <li><a href="#forms-switch">Switch (toggle)</a></li>
     </ul>
 

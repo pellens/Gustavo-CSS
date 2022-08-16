@@ -86,6 +86,37 @@
 
                 </section>
 
+                <section>
+
+                    <h3>Forms</h3>
+
+                    <h4 id="forms-checkbox">Checkbox</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/forms/forms-checkbox.php");?>
+                    </div>
+
+                    <h4 id="forms-checkbox-label">Checkbox with label</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/forms/forms-checkbox-label.php");?>
+                    </div>
+
+                    <h4 id="forms-radio">Radiobutton</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/forms/forms-radio.php");?>
+                    </div>
+
+                    <h4 id="forms-radio-label">Radiobutton with label</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/forms/forms-radio-label.php");?>
+                    </div>
+                    
+                    <h4 id="forms-switch">Switch</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/forms/forms-switch.php");?>
+                    </div>
+
+                </section>
+
         <details>
       <summary>You can find this information here</summary>
       <p>Long information about the detail.</p>
@@ -97,6 +128,33 @@
     <meter value="20" min="0" max="100">20%</meter>
     <progress></progress>
     <progress value="20" min="0" max="100"></progress>
+
+    <span class="g-tooltip" data-content="Dit is een tooltip">
+        Tooltip
+    </span>
+    <style>
+        .g-tooltip:before {
+            display: none;
+            content: attr(data-content);
+            background-color: rgba(0,0,0,.75);
+            color: #FFF;
+            position: absolute;
+            width: 10rem;
+            left: 50%;
+            bottom: 100%;
+            border-radius: 4px;
+            padding: .5rem;
+            font-size: .825rem;
+            text-align: center;
+            font-weight: 500;
+            margin-left: -5rem;
+            margin-bottom: .5rem;
+        }
+
+        .g-tooltip:hover:before {
+            display: block;
+        }
+    </style>
     
         <section>
             <h3>Dropdown</h3>
@@ -240,37 +298,7 @@
                     </label>
 
         </div>
-        <div class="codePreview">
 
-                    <label class="g-radio">
-                        <input type="radio" checked>
-                        <span class="g-radio__toggle"></span>
-                    </label>
-                    
-                    <label class="g-radio g-radio--success">
-                        <input type="radio" checked>
-                        <span class="g-radio__toggle"></span>
-                    </label>
-
-                    <label class="g-radio g-radio--warning">
-                        <input type="radio" checked>
-                        <span class="g-radio__toggle"></span>
-                    </label>
-
-                    <label class="g-radio g-radio--error">
-                        <input type="radio" checked>
-                        <span class="g-radio__toggle"></span>
-                    </label>
-
-                    <div class="codePreview">
-                        
-                    </div>
-
-                    <div class="codePreview">
-                        <?php include("templates/components/forms/forms-checkbox.php");?>
-                    </div>
-                    
-            </div>
 
             <?php include("templates/components/forms/forms-input.php");?>
 
