@@ -11,15 +11,20 @@
         <style>
             :root {
                 --font-size: 14px;
-                --g-color-primary: #8f40c2;
-                --button-g-color-primary: #d0c1db;
-                --border-radius: 20px;
             }
         </style>
     </head>
     <body>
 
         <div class="container">
+            <aside>
+                <h2>Components</h2>
+                <h3>Buttons</h3>
+                <ul>
+                    <li>Buttons</li>
+                    <li>Button states</li>
+                </ul>
+            </aside>
 
         <i onclick="document.getElementsByTagName('html')[0].setAttribute('data-theme', 'dark');" class="uil uil-moon"></i>
         <i onclick="document.getElementsByTagName('html')[0].setAttribute('data-theme', '');" class="uil uil-sun"></i>
@@ -27,6 +32,29 @@
         <h1>Gustavo CSS</h1>
 
         <h2>Components</h2>
+
+        <details>
+      <summary>You can find this information here</summary>
+      <p>Long information about the detail.</p>
+    </details>
+    
+    <hr/>
+    
+    <input type="color" />
+    
+    <hr/>
+    
+    <meter value="20" min="0" max="100">20%</meter>
+    <progress></progress>
+    <progress value="20" min="0" max="100"></progress>
+    
+    <hr/>
+    
+    <input type="text" list="datalist" />
+    <datalist id="datalist">
+      <option value="Mercedes">A German car</option>
+      <option value="Volvo">A Swedish car</option>
+    </datalist>
 
         <section>
             <h3>Dropdown</h3>
@@ -58,6 +86,39 @@
                 </div>
             </div>
 
+            <div class="g-dropdown g-dropdown--bottom-right">
+                <button class="g-dropdown__toggle g-button g-button--icon-after">
+                    Bottom right <i class="uil uil-angle-down"></i>
+                </button>
+                <div class="g-dropdown__content">
+                    <div class="g-dropdown__item">Dropdown content comes here</div>
+                    <div class="g-dropdown__item">Dropdown content comes here</div>
+                    <div class="g-dropdown__item">Dropdown content comes here</div>
+                </div>
+            </div>
+
+            <div class="g-dropdown g-dropdown--top-right">
+                <button class="g-dropdown__toggle g-button g-button--icon-after">
+                    Top right <i class="uil uil-angle-down"></i>
+                </button>
+                <div class="g-dropdown__content">
+                    <div class="g-dropdown__item">Dropdown content comes here</div>
+                    <div class="g-dropdown__item">Dropdown content comes here</div>
+                    <div class="g-dropdown__item">Dropdown content comes here</div>
+                </div>
+            </div>
+
+            <div class="g-dropdown g-dropdown--top-left">
+                <button class="g-dropdown__toggle g-button g-button--icon-after">
+                    Top left <i class="uil uil-angle-down"></i>
+                </button>
+                <div class="g-dropdown__content">
+                    <div class="g-dropdown__item">Dropdown content comes here</div>
+                    <div class="g-dropdown__item">Dropdown content comes here</div>
+                    <div class="g-dropdown__item">Dropdown content comes here</div>
+                </div>
+            </div>
+
             <div class="g-dropdown">
                 <button class="g-dropdown__toggle g-button g-button--icon-after">
                     Dropdown <i class="uil uil-angle-down"></i>
@@ -78,6 +139,95 @@
                     <div class="g-dropdown__item g-dropdown__item--icon-after">Dropdown content <i class="uil uil-cloud-download"></i></div>
                     <div class="g-dropdown__item g-dropdown__item--icon-after">Dropdown content <i class="uil uil-cloud-download"></i></div>
                 </div>
+            </div>
+
+        </section>
+
+        <section>
+            <h3>Checkbox</h3>
+
+            <div class="codePreview">
+                
+                <label>
+                    <span class="g-switch">
+                        <input type="checkbox">
+                        <span class="g-switch__toggle"></span>
+                    </span>
+                    Turn it off or on?
+                </label>
+
+                <label>
+                    <span class="g-switch g-switch--error">
+                        <input type="checkbox" checked>
+                        <span class="g-switch__toggle"></span>
+                    </span>
+                </label>
+
+                <label>
+                    <span class="g-switch g-switch--success">
+                        <input type="checkbox" checked>
+                        <span class="g-switch__toggle"></span>
+                    </span>
+                </label>
+
+                <label>
+                    <span class="g-switch g-switch--secondary">
+                        <input type="checkbox" checked>
+                        <span class="g-switch__toggle"></span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="codePreview">
+                    <label class="g-checkbox">
+                        <input type="checkbox">
+                        <span class="g-checkbox__toggle"></span>
+                        Turn it off or on?
+                    </label>
+
+                    <label class="g-radio">
+                        <input type="radio" name="radio" value="option 1" checked>
+                        <span class="g-radio__toggle"></span>
+                        Turn it off or on?
+                    </label>
+
+                    <label class="g-radio">
+                        <input type="radio" name="radio" value="option 2">
+                        <span class="g-radio__toggle"></span>
+                        Turn it off or on?
+                    </label>
+
+        </div>
+        <div class="codePreview">
+
+                    <label class="g-radio">
+                        <input type="radio" checked>
+                        <span class="g-radio__toggle"></span>
+                    </label>
+                    
+                    <label class="g-radio g-radio--success">
+                        <input type="radio" checked>
+                        <span class="g-radio__toggle"></span>
+                    </label>
+
+                    <label class="g-radio g-radio--warning">
+                        <input type="radio" checked>
+                        <span class="g-radio__toggle"></span>
+                    </label>
+
+                    <label class="g-radio g-radio--error">
+                        <input type="radio" checked>
+                        <span class="g-radio__toggle"></span>
+                    </label>
+
+                    <div class="codePreview">
+                        <?php include("templates/components/forms/forms-input.php");?>
+                    </div>
+
+                    <div class="codePreview">
+                        <?php include("templates/components/forms/forms-checkbox.php");?>
+                    </div>
+                    
             </div>
 
         </section>

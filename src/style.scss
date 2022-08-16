@@ -17,9 +17,9 @@ $sizes:
 $sizesProgress:
     "tiny" .25,
     "small" .5,
-    "default" 1,
-    "big" 1.5,
-    "huge" 2;
+    "default" .75,
+    "big" 1.25,
+    "huge" 1.5;
 
 $sizesTags:
     "tiny" 1.25,
@@ -88,7 +88,9 @@ $colors:
     --color-border: #333;
 }
 
-* {
+*,
+:before,
+:after {
     position: relative;
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
@@ -122,6 +124,7 @@ body {
 @import "helpers/width";
 @import "helpers/margin";
 @import "helpers/padding";
+@import "helpers/typo";
 
 /* Components */
 @import "components/buttons";

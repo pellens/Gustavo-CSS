@@ -25,6 +25,8 @@
             margin: .5rem;
             background-color: var(--modal-background);
             border-radius: var(--modal-border-radius);
+            display: flex;
+            flex-direction: column;
 
             .g-modal--pane & {
                 height: 100vh;
@@ -54,7 +56,7 @@
         &__content {
             overflow-y: auto;
             padding: 1rem;
-            //max-height: calc( 100% - 10rem);
+            flex: 1;
 
             .g-modal--pane &,
             .g-modal--fullscreen & {
@@ -78,7 +80,7 @@
 
         }
 
-        &--fullwidth {
+        &--fullscreen {
 
         }
     }

@@ -18,6 +18,42 @@
             padding: .5rem 0;
         }
 
+        &--bottom-right {
+            .g-dropdown__content {
+                top: 100%;
+                bottom: auto;
+                left: auto;
+                right: 0;
+            }
+        }
+
+        &--bottom-left {
+            .g-dropdown__content {
+                top: 100%;
+                bottom: auto;
+                left: 0;
+                right: auto;
+            }
+        }
+
+        &--top-right {
+            .g-dropdown__content {
+                top: auto;
+                bottom: 100%;
+                right: 0;
+                left: auto;
+            }
+        }
+
+        &--top-left {
+            .g-dropdown__content {
+                top: auto;
+                bottom: 100%;
+                right: auto;
+                left: 0;
+            }
+        }
+
         &:hover .g-dropdown__content {
             display: block;
         }

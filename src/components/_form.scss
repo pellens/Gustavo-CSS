@@ -1,3 +1,276 @@
-.g {
+@mixin inputToggle {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-flex;
+    background-color: var(--color-primary);
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-right: .5rem;
 
+    &:before {
+        content:' ';
+        background-color: #FFF;
+        width: .5rem;
+        height: .5rem;
+        border-radius: 1rem;
+    }
 }
+
+.g {
+    &-form-element {
+        display: inline-flex;
+        flex-direction: column;
+        margin: .5rem 0;
+        position: relative;
+        vertical-align: middle;
+
+        label {
+            font-size: .825rem;
+            margin-bottom: .25rem;
+        }
+
+        input,
+        select {
+            border: 1px solid var(--color-border);
+            height: 3rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: var(--font-family);
+            padding: 0 1rem;
+            appearance: none;
+            vertical-align: middle;
+        }
+
+        select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z'/%3E%3C/svg%3E");
+            background-size: 1.5rem 1.5rem;
+            background-repeat: no-repeat;
+            background-position: right .75rem top .75rem;
+            padding-right: 2.5rem;
+        }
+
+        &--file {
+            input {
+                opacity: 0;
+            }
+
+            &:before {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M8.71,7.71,11,5.41V15a1,1,0,0,0,2,0V5.41l2.29,2.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42l-4-4a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21l-4,4A1,1,0,1,0,8.71,7.71ZM21,12a1,1,0,0,0-1,1v6a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V13a1,1,0,0,0-2,0v6a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V13A1,1,0,0,0,21,12Z'/%3E%3C/svg%3E");
+                background-size: 1rem 1rem;
+                background-repeat: no-repeat;
+                background-position: left 1rem top 1rem;
+                content: attr(data-label);
+                display: flex;
+                align-items: center;
+                padding: 0 1rem 0 2.5rem;
+                position: absolute;
+                border-radius: 4px;
+                z-index: 2;
+                pointer-events: none;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                border: 1px solid var(--color-border);
+            }
+        }
+    }
+
+    &-switch {
+        position: relative;
+        display: inline-flex;
+        vertical-align: middle;
+        height: 1.5rem;
+        width: 3rem;
+        border-radius: 1rem;
+
+        input {
+            opacity: 0;
+
+            &:checked + .g-switch__toggle {
+                background-color: var(--color-primary);
+            }
+              
+            &:checked + .g-switch__toggle:before {
+                transform: translateX(1.5rem);
+            }
+        }
+
+        &__toggle {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: 250ms;
+            background-color: var(--color-default);
+            border-radius: 1rem;
+
+            &:before {
+                position: absolute;
+                content: "";
+                width: 1rem;
+                height: 1rem;
+                border-radius: 1rem;
+                left: .25rem;
+                bottom: .25rem;
+                background-color: white;
+                transition: 250ms;
+              }
+        }
+
+        @each $title, $bg, $txt in $colors {
+            &--#{$title} {
+                input {
+                    &:checked + .g-switch__toggle {
+                        background-color: var(--color-#{$title});
+                    }
+                }
+                    
+            }
+        }
+    }
+
+    &-checkbox {
+        display: inline-flex;
+        vertical-align: middle;
+
+        &__toggle {
+            @include inputToggle;
+            background-color: #FFF;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+
+            &:before {
+                display: none;
+                width: .5rem;
+                height: .2rem;
+                border-radius: 0;
+                transform: rotate(-45deg);
+                background-color: transparent;
+                border-left: 2px solid #FFF;
+                border-bottom: 2px solid #FFF;
+            }
+        }
+
+        input {
+            display: none;
+
+            &:checked + .g-checkbox__toggle {
+                background-color: var(--color-primary);
+                border: 0;
+
+                &:before {
+                    display: block;
+                    margin-top: -.1rem;
+                }
+            }
+        }
+
+        @each $title, $bg, $txt in $colors {
+            &--#{$title} {
+                input {
+                    &:checked + .g-checkbox__toggle {
+                        background-color: var(--color-#{$title});
+                    }
+                }
+                    
+            }
+        }
+    }
+
+    &-radio {
+        display: inline-flex;
+        vertical-align: middle;
+
+        &__toggle {
+            @include inputToggle;
+            background-color: #FFF;
+            border: 1px solid var(--color-border);
+        }
+
+        input {
+            display: none;
+
+            &:checked + .g-radio__toggle {
+                background-color: var(--color-primary);
+                border: 0;
+                
+                &:before {
+                    display: block;
+                }
+            }
+        }
+
+        @each $title, $bg, $txt in $colors {
+            &--#{$title} {
+                input {
+                    &:checked + .g-radio__toggle {
+                        background-color: var(--color-#{$title});
+                    }
+                }
+                    
+            }
+        }
+    }
+}
+
+/* The switch - the box around the slider */
+
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
