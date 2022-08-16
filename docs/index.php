@@ -17,30 +17,80 @@
     <body>
 
         <div class="container">
-            <aside>
+            
+            <?php include("aside.php");?>
+
+            <main>
+
+                <i onclick="document.getElementsByTagName('html')[0].setAttribute('data-theme', 'dark');" class="uil uil-moon"></i>
+                <i onclick="document.getElementsByTagName('html')[0].setAttribute('data-theme', '');" class="uil uil-sun"></i>
+
+                <h1>Gustavo CSS</h1>
+
                 <h2>Components</h2>
-                <h3>Buttons</h3>
-                <ul>
-                    <li>Buttons</li>
-                    <li>Button states</li>
-                </ul>
-            </aside>
 
-        <i onclick="document.getElementsByTagName('html')[0].setAttribute('data-theme', 'dark');" class="uil uil-moon"></i>
-        <i onclick="document.getElementsByTagName('html')[0].setAttribute('data-theme', '');" class="uil uil-sun"></i>
+                <section>
 
-        <h1>Gustavo CSS</h1>
+                    <h3>Buttons</h3>
 
-        <h2>Components</h2>
+                    <h4 id="buttons">Default buttons</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/buttons/buttons.php");?>
+                    </div>
+
+                    <h4 id="buttons-form">Form buttons</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/buttons/buttons-input.php");?>
+                    </div>
+
+                    <h4 id="buttons-round">Round buttons</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/buttons/buttons-round.php");?>
+                    </div>
+
+                    <h4 id="buttons-outline">Outline buttons</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/buttons/buttons-outline.php");?>
+                    </div>
+
+                    <h4 id="buttons-sizes">Button sizes</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/buttons/buttons-sizes.php");?>
+                    </div>
+
+                    <h4 id="buttons-icon">Icon buttons</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/buttons/buttons-icons.php");?>
+                    </div>
+
+                    <h4 id="buttons-states">Button states</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/buttons/buttons-states.php");?>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3>Links</h3>
+
+                    <h4 id="links">Default links</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/links/links.php");?>
+                    </div>
+
+                    <h4 id="links-icon">Icon links</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/links/links-icons.php");?>
+                    </div>
+
+                </section>
 
         <details>
       <summary>You can find this information here</summary>
       <p>Long information about the detail.</p>
     </details>
     
-    <hr/>
-    
-    <input type="color" />
     
     <hr/>
     
@@ -48,14 +98,6 @@
     <progress></progress>
     <progress value="20" min="0" max="100"></progress>
     
-    <hr/>
-    
-    <input type="text" list="datalist" />
-    <datalist id="datalist">
-      <option value="Mercedes">A German car</option>
-      <option value="Volvo">A Swedish car</option>
-    </datalist>
-
         <section>
             <h3>Dropdown</h3>
 
@@ -221,7 +263,7 @@
                     </label>
 
                     <div class="codePreview">
-                        <?php include("templates/components/forms/forms-input.php");?>
+                        
                     </div>
 
                     <div class="codePreview">
@@ -229,6 +271,8 @@
                     </div>
                     
             </div>
+
+            <?php include("templates/components/forms/forms-input.php");?>
 
         </section>
 
@@ -252,51 +296,10 @@
             </div>
         </section>
 
-        
-
-
-
-        <section>
-
-            <h3>Buttons</h3>
-            
-            <div class="codePreview">
-            <?php include("templates/components/buttons/buttons-input.php");?>
-            </div>
-
-            <div class="codePreview">
-            <?php include("templates/components/buttons/buttons.php");?>
-            </div>
-
-            <div class="codePreview">
-            <?php include("templates/components/buttons/buttons-outline.php");?>
-            </div>
-
-            <div class="codePreview">
-            <?php include("templates/components/buttons/buttons-sizes.php");?>
-            </div>
-
-            <div class="codePreview">
-            <?php include("templates/components/buttons/buttons-icons.php");?>
-            </div>
-
-            <div class="codePreview">
-            <?php include("templates/components/buttons/buttons-states.php");?>
-            </div>
-
-        </section>
 
         <section>
 
             <h3>Links</h3>
-
-            <div class="codePreview">
-            <?php include("templates/components/links/links.php");?>
-            </div>
-
-            <div class="codePreview">
-            <?php include("templates/components/links/links-icons.php");?>
-            </div>
 
         </section>
 
@@ -503,6 +506,8 @@
             &lt;/style>
         </pre>
 
+            </main>
+
     </div>
 
         <script>
@@ -518,10 +523,31 @@
         </script>
 
         <style>
+            body {
+                padding: 0 40px 0 280px;
+            }
+
             .container {
                 width: 100%;
                 max-width: 1000px;
                 margin: 0 auto;
+                display: flex;
+            }
+
+            .container aside {
+                width: 240px;
+                padding: 2rem;
+                position: fixed;
+                left: 0;
+                top: 0;
+                height: 100%;
+                border-right: 1px solid #DDD;
+            }
+
+            .container aside ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
             }
 
             details {

@@ -5,7 +5,8 @@
 - [ ] Autoprefixer
 - [ ] Progress - intermediate
 - [ ] Scrollbar styling
-- [ ] Dropdown positions
+- [x] Dropdown positions
+- [ ] Toggle (switch) innertext or icons
 
 ## Guide
 

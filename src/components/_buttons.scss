@@ -74,8 +74,8 @@ input[type=reset] {
                 content:' ';
                 left: 0;
                 top: 0;
-                width: calc(var(--icon-size) / 2);
-                height: calc(var(--icon-size) / 2);
+                width: calc(var(--icon-size) / 1.5);
+                height: calc(var(--icon-size) / 1.5);
                 border: 2px solid #FFF;
                 border-color: var(--button-text-color-default);
                 border-radius: 100%;
@@ -114,6 +114,10 @@ input[type=reset] {
                     padding: 0 calc(#{$size}rem / 4);
                 }
             }
+        }
+
+        &--round {
+            border-radius: 4rem;
         }
 
         &--outline {
