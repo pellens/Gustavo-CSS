@@ -1,9 +1,11 @@
 <table class="g-table g-table--columns">
     <thead>
-        <th>Cellheader</th>
-        <th>Cellheader</th>
-        <th>Cellheader</th>
-        <th></th>
+        <tr>
+            <th>Cellheader</th>
+            <th>Cellheader</th>
+            <th>Cellheader</th>
+            <th></th>
+        </tr>
     </thead>
     <tbody>
         <tr>
@@ -26,9 +28,11 @@
         </tr>
     </tbody>
     <tfoot>
-        <td>Cellfooter</td>
-        <td>Cellfooter</td>
-        <td>Cellfooter</td>
-        <td></td>
+        <tr>
+            <td>Cellfooter</td>
+            <td>Cellfooter</td>
+            <td>Cellfooter</td>
+            <td></td>
+        </tr>
     </tfoot>
 </table>

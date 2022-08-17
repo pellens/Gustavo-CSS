@@ -20,4 +20,10 @@
     &-align-items-center { align-items: center; }
     &-align-items-start { align-items: flex-start; }
     &-align-items-end { align-items: flex-end; }
+
+    /* Direction */
+
+    &-flex-row {
+        flex-direction: row;
+    }
 }

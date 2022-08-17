@@ -82,9 +82,8 @@ $colors:
 }
 
 [data-theme='dark'] {
-    --body-background: #111;
+    --body-background: #050f1f;
     --text-color: #FFF;
-
     --color-border: #333;
 }
 
@@ -118,15 +117,6 @@ body {
 @import url("https://unicons.iconscout.com/release/v4.0.0/css/line.css");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-/* Helpers */
-@import "helpers/colors";
-@import "helpers/display";
-@import "helpers/align";
-@import "helpers/width";
-@import "helpers/margin";
-@import "helpers/padding";
-@import "helpers/typo";
-
 /* Components */
 @import "components/buttons";
 @import "components/tabs";
@@ -139,3 +129,14 @@ body {
 @import "components/modals";
 @import "components/messages";
 @import "components/dropdown";
+@import "components/collapse";
+
+/* Helpers */
+@import "helpers/display";
+@import "helpers/align";
+@import "helpers/width";
+@import "helpers/margin";
+@import "helpers/padding";
+@import "helpers/typo";
+@import "helpers/colors";
+@import "helpers/border";

@@ -7,4 +7,21 @@
             }
         }
     }
+
+    &-background {
+        @each $a, $b, $c in $colors {
+            &--#{$a} {
+                background-color: var(--color-#{$a});
+                color: var(--button-text-color-#{$a})
+            }
+        }
+    }
+
+    &-border {
+        @each $a, $b, $c in $colors {
+            &--#{$a} {
+                border-color: var(--color-#{$a});
+            }
+        }
+    }
 }

@@ -1,0 +1,22 @@
+.g {
+    &-collapse {
+        //border-bottom: 1px solid var(--color-border);
+        appearance: none;
+
+        &__title {
+            //padding: 1rem 0;
+            font-weight: 500;
+            //display: inline-flex;
+
+            &::marker {
+            }
+        }
+
+        &__content {
+            //padding: 1rem;
+            //border-radius: 4px;
+            //margin-bottom: 1rem;
+            padding-left: 1rem;
+        }
+    }
+}

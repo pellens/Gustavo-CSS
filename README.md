@@ -5,8 +5,8 @@
 - [ ] Autoprefixer
 - [ ] Progress - intermediate
 - [ ] Scrollbar styling
-- [x] Dropdown positions
-- [ ] Toggle (switch) innertext or icons
+- [ ] Stats up down arrow
+- [ ] Dropzone upload
 
 ## Guide
 

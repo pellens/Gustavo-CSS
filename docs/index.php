@@ -29,6 +29,7 @@
 
                 <h2>Components</h2>
 
+                <!-- Buttons -->
                 <section>
 
                     <h3>Buttons</h3>
@@ -70,6 +71,7 @@
 
                 </section>
 
+                <!-- Links -->
                 <section>
 
                     <h3>Links</h3>
@@ -86,9 +88,45 @@
 
                 </section>
 
+                <!-- Forms -->
                 <section>
 
                     <h3>Forms</h3>
+
+                    <h4 id="forms">Inputs</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/forms/forms-input.php");?>
+                    </div>
+
+                    <h4 id="forms-textarea">Textarea</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/forms/forms-textarea.php");?>
+                    </div>
+
+                    <h4 id="forms-upload">Upload</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/forms/forms-upload.php");?>
+                    </div>
+
+                    <h4 id="forms-datetime">Date & time</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/forms/forms-date-time.php");?>
+                    </div>
+
+                    <h4 id="forms-colorpicker">Colorpicker</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/forms/forms-colorpicker.php");?>
+                    </div>
+
+                    <h4 id="forms-label">Labels</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/forms/forms-label.php");?>
+                    </div>
+
+                    <h4 id="forms-colors">Input colors</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/forms/forms-color.php");?>
+                    </div>
 
                     <h4 id="forms-checkbox">Checkbox</h4>
                     <div class="codePreview">
@@ -114,13 +152,80 @@
                     <div class="codePreview">
                     <?php include("templates/components/forms/forms-switch.php");?>
                     </div>
+                    
+                    <h4 id="forms-switch-label">Switch with label</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/forms/forms-switch-label.php");?>
+                    </div>
+
+                    <h4 id="forms-switch-content">Switch with content</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/forms/forms-switch-content.php");?>
+                    </div>
 
                 </section>
 
-        <details>
-      <summary>You can find this information here</summary>
-      <p>Long information about the detail.</p>
-    </details>
+                <!-- Tables -->
+                <section>
+                    <h3>Tables</h3>
+
+                    <h4 id="tables">Default</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/tables/table.php");?>
+                    </div>
+
+                    <h4 id="tables-striped">Striped table</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/tables/table-striped.php");?>
+                    </div>
+
+                    <h4 id="tables-column">Column table</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/tables/table-columns.php");?>
+                    </div>
+                </section>
+
+                <!-- Helpers -->
+                <section>
+                    <h3>Helpers</h3>
+
+                    <h4 id="text-color">Text color</h4>
+                    <div class="codePreview">
+                    <?php include("templates/helpers/text-color.php");?>
+                    </div>
+
+                    <h4 id="background-color">Background color</h4>
+                    <div class="codePreview">
+                    <?php include("templates/helpers/background-color.php");?>
+                    </div>
+                </section>
+
+        <details class="g-collapse">
+            <summary class="g-collapse__title">You can find this information here</summary>
+            <div class="g-collapse__content">Long information about the detail.</div>
+        </details>
+
+        <details class="g-collapse">
+            <summary class="g-collapse__title">You can find this information here</summary>
+            <div class="g-collapse__content">
+                
+                <details class="g-collapse">
+                    <summary class="g-collapse__title">You can find this information here</summary>
+                    <div class="g-collapse__content">Long information about the detail.</div>
+                </details>
+
+                <details class="g-collapse">
+                    <summary class="g-collapse__title">You can find this information here</summary>
+                    <div class="g-collapse__content">Long information about the detail.</div>
+                </details>
+
+            </div>
+        </details>
+
+        <details class="g-collapse">
+            <summary class="g-collapse__title">You can find this information here</summary>
+            <div class="g-collapse__content">Long information about the detail.</div>
+        </details>
     
     
     <hr/>
@@ -244,67 +349,6 @@
         </section>
 
         <section>
-            <h3>Checkbox</h3>
-
-            <div class="codePreview">
-                
-                <label>
-                    <span class="g-switch">
-                        <input type="checkbox">
-                        <span class="g-switch__toggle"></span>
-                    </span>
-                    Turn it off or on?
-                </label>
-
-                <label>
-                    <span class="g-switch g-switch--error">
-                        <input type="checkbox" checked>
-                        <span class="g-switch__toggle"></span>
-                    </span>
-                </label>
-
-                <label>
-                    <span class="g-switch g-switch--success">
-                        <input type="checkbox" checked>
-                        <span class="g-switch__toggle"></span>
-                    </span>
-                </label>
-
-                <label>
-                    <span class="g-switch g-switch--secondary">
-                        <input type="checkbox" checked>
-                        <span class="g-switch__toggle"></span>
-                    </span>
-                </label>
-            </div>
-
-            <div class="codePreview">
-                    <label class="g-checkbox">
-                        <input type="checkbox">
-                        <span class="g-checkbox__toggle"></span>
-                        Turn it off or on?
-                    </label>
-
-                    <label class="g-radio">
-                        <input type="radio" name="radio" value="option 1" checked>
-                        <span class="g-radio__toggle"></span>
-                        Turn it off or on?
-                    </label>
-
-                    <label class="g-radio">
-                        <input type="radio" name="radio" value="option 2">
-                        <span class="g-radio__toggle"></span>
-                        Turn it off or on?
-                    </label>
-
-        </div>
-
-
-            <?php include("templates/components/forms/forms-input.php");?>
-
-        </section>
-
-        <section>
             <h3>Progress</h3>
             <div class="codePreview">
 <progress class="g-progress"></progress>
@@ -381,22 +425,10 @@
                 </div>
         </div>
 
-        </section>
+        <div class="g-border g-border--dashed g-border--error">
+            Error border
+        </div>
 
-        <section>
-            <h3>Tables</h3>
-            
-            <div class="codePreview">
-            <?php include("templates/components/tables/table.php");?>
-            </div>
-
-            <div class="codePreview">
-            <?php include("templates/components/tables/table-striped.php");?>
-            </div>
-
-            <div class="codePreview">
-            <?php include("templates/components/tables/table-columns.php");?>
-            </div>
         </section>
 
         <section>
@@ -509,22 +541,6 @@
             </div>
         </section>
 
-        <section>
-            <h2>Helpers</h2>
-            <div class="codePreview">
-<p class="g-color--primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-<p class="g-color--secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-<p class="g-color--error">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-<p class="g-color--success">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-<p class="g-color--warning">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-<p class="g-color--default">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-<i class="g-color--success uil uil-check-circle"></i>
-<i class="g-color--warning uil uil-exclamation-triangle"></i>
-<i class="g-color--error uil uil-exclamation-circle"></i>
-            </div>
-        </section>
-
         <h2>Adjust theming</h2>
         <pre>
             &lt;style>
@@ -546,7 +562,8 @@
                 result.forEach(line => {
                     html+=line.replaceAll("<","&lt")+"\n";
                 })
-                element.innerHTML += "<details><summary>Show code</summary><pre class='lolight'><code>"+html.trim()+"</code></pre></details>"
+                //element.innerHTML += "<details><summary>Show code</summary><pre class='lolight'><code>"+html.trim()+"</code></pre></details>"
+                element.innerHTML += "<details><summary>Show code</summary><pre><code class='language-html'>"+html.trim()+"</code></pre></details>"
             })
         </script>
 
@@ -578,17 +595,35 @@
                 padding: 0;
             }
 
-            details {
+            details:not(.g-collapse) {
                 margin-top: 2rem;
             }
 
             .codePreview {
-                border: 1px solid #eee;
-                padding: 2rem;
-                margin-bottom: 2rem;
+                /*border: 1px solid #eee;
+                padding: 2rem;*/
+                margin-bottom: 4rem;
                 border-radius: 4px;
+                border-bottom: 1px solid #EEE;
+                padding-bottom: 4rem;
             }
-            pre {
+
+            h2 {
+                font-size: 2rem;
+            }
+            h3 {
+                font-size: 1.75rem;
+            }
+            H4 {
+                font-size: 1.25rem;
+            }
+
+            h4 {
+                margin-top: 4rem;
+                display: block;
+            }
+
+            /*pre {
                 background-color: #130c38;
                 font-family: 'Courier New', Courier, monospace;
                 font-size: 14px;
@@ -596,23 +631,22 @@
                 padding: 1rem;
                 border-radius: 8px;
                 margin-top: 2rem;
-            }
+            }*/
 
-            .ll-nam {
-                color: #858991;
-            }
-            .ll-key {
-                color: orange;
-                font-weight: normal;
-            }
-            .ll-pct {
-                color: #CCC;
-            }
-            .ll-str {
-                font-weight: 600;
+            code {
+                border-radius: 8px;
+                padding: 1.5rem 2rem !important;
+                line-height: 1.75rem;
+                font-size: .825rem;
             }
         </style>
 
-        <script src="/docs/lolight-1.4.0.min.js"></script>
+        <!--<script src="/docs/lolight-1.4.0.min.js"></script>
+
+        <pre><code class="language-html">...</code></pre>-->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js" integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/atlas.min.css" integrity="sha512-zAifE3claO+/HW1U03Rhi/F74xMzp+X+5HpN55SJY2dBMvBg3FKO12adWRpWSwaT4FAtjsWOJkyW4zfGLY9uzA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script>hljs.highlightAll();</script>
     </body>
 </html>
