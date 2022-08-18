@@ -1,0 +1,61 @@
+@use "sass:math";
+
+.g-grid {
+    max-width: var(--grid-max-width);
+    width: 100%;
+
+    &--fullwidth {
+        max-width: 100%;
+    }
+}
+
+.g-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    .g-grid--gap & {
+        margin-left: calc( (var(--grid-gap) / 2) * -1 );
+        margin-right: calc( (var(--grid-gap) / 2) * -1 );
+    }
+}
+
+.g-col {
+    @for $i from 1 through 12 {
+        $row: calc(12 / #{$i});
+
+        &-#{$i} {
+            flex-basis: 0;
+            flex-grow: 1;
+            width: calc( (100% / $row) );
+            flex: 0 0 calc( (100% / $row) );
+
+            .g-grid--gap & {
+                margin-left: calc( var(--grid-gap) / 2);
+                margin-right: calc( var(--grid-gap) / 2);
+
+                width: calc( (100% / $row) - var(--grid-gap) );
+                flex: 0 0 calc( (100% / $row) - var(--grid-gap) );
+            }
+        }
+
+        &-push-#{$i} {
+            margin-left: calc( (100% / $row) );
+
+            .g-grid--gap & {
+                margin-left: calc( (100% / $row) - var(--grid-gap) );
+            }
+        }
+    }
+
+}
+
+
+.g-push {
+    @for $i from 1 through 12 {
+        $row: calc(12 / #{$i});
+        
+        
+    }
+
+}

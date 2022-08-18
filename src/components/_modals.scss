@@ -20,7 +20,7 @@
 
         &__holder {
             width: 100%;
-            max-width: 25rem;
+            max-width: 45rem;
             max-height: 100vh;
             margin: .5rem;
             background-color: var(--modal-background);
@@ -77,7 +77,7 @@
         }
 
         &--dialog {
-
+            max-width: 15rem;
         }
 
         &--fullscreen {

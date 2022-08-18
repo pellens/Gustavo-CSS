@@ -11,6 +11,7 @@
         <style>
             :root {
                 --font-size: 14px;
+                --grid-gap: 1rem;
             }
         </style>
     </head>
@@ -408,13 +409,12 @@
         </div>
 
         <div class="codePreview">
-                <div class="g-message g-text-center">
-                    <div class="g-message__icon">🤯</div>
-                    <div class="g-message__title">Nothing here</div>
-                    <div class="g-message__content">You didn't add anything yet.</div>
-                    <div class="g-message__action"><button class="g-button g-button--primary">Add something</button></div>
-                </div>
-
+<div class="g-message g-text-center">
+    <div class="g-message__icon">🤯</div>
+    <div class="g-message__title">Nothing here</div>
+    <div class="g-message__content">You didn't add anything yet.</div>
+    <div class="g-message__action"><button class="g-button g-button--primary">Add something</button></div>
+</div>
         </div>
         <div class="codePreview">
 
@@ -430,6 +430,87 @@
         </div>
 
         </section>
+
+        <h4>Grid</h4>
+        <div class="codePreview">
+        <div class="g-grid">
+<?php for($i=1; $i<=12; $i++):?>
+    <div class="g-row">
+        <div class="g-col-<?php echo $i;?>">.g-col-<?php echo $i;?></div>
+    </div>
+<?php endfor;?>
+</div></div>
+
+<h4>Grid push</h4>
+<div class="codePreview">
+        <div class="g-grid">
+<?php for($i=1; $i<=12; $i++):?>
+    <div class="g-row">
+        <div class="g-col-<?php echo $i;?> g-col-push-<?php echo 12-$i;?>">.g-col-push-<?php echo $i;?></div>
+    </div>
+<?php endfor;?>
+</div></div>
+
+<h4>Grid rows</h4>
+<div class="codePreview">
+    <div class="g-grid">
+        <?php for($r=1; $r<=6; $r++):?>
+            <div class="g-row">
+                <?php for($i=1; $i<=(12/$r); $i++):?>
+                    <div class="g-col-<?php echo $r;?>">Col <?php echo $r;?></div>
+                <?php endfor;?>
+            </div>
+            <?php if($r%3!=0) $r++;?>
+        <?php endfor;?>
+    </div>
+</div>
+
+<h4>Grid gap</h4>
+<div class="codePreview">
+    <div class="g-grid g-grid--gap">
+        <?php for($r=1; $r<=6; $r++):?>
+            <div class="g-row">
+                <?php for($i=1; $i<=(12/$r); $i++):?>
+                    <div class="g-col-<?php echo $r;?>">Col <?php echo $r;?></div>
+                <?php endfor;?>
+            </div>
+            <?php if($r%3!=0) $r++;?>
+        <?php endfor;?>
+    </div>
+</div>
+
+<h4>Grid nesting</h4>
+<div class="codePreview">
+    <div class="g-grid g-grid--gap">
+        <?php for($r=4; $r<=6; $r++):?>
+            <div class="g-row">
+                <?php for($i=1; $i<=(12/$r); $i++):?>
+                    <div class="g-col-<?php echo $r;?>">
+
+                        <div class="g-row">
+                            <div class="g-col-3">Nesting</div>
+                            <div class="g-col-3">Nesting</div>
+                            <div class="g-col-3">Nesting</div>
+                            <div class="g-col-3">Nesting</div>
+                        </div>
+
+                    </div>
+                <?php endfor;?>
+            </div>
+            <?php if($r%3!=0) $r++;?>
+        <?php endfor;?>
+    </div>
+</div>
+    
+
+        <style>
+            [class^="g-col-"] {
+                margin-bottom: 1rem;
+                border-radius: 4px;
+                border: 1px solid #DDD;
+                padding: .5rem;
+            }
+        </style>
 
         <section>
             <h3>Modal</h3>

@@ -52,6 +52,10 @@ $colors:
         --color-#{$title}: #{$bg};
     }
 
+    /* Grid */
+    --grid-gap: 1rem;
+    --grid-max-width: 1000px;
+
     /* Progress */
     --progress-border-radius: 2px;
     @each $title, $size in $sizesProgress {
@@ -132,6 +136,7 @@ body {
 @import "components/collapse";
 
 /* Helpers */
+@import "helpers/grid";
 @import "helpers/display";
 @import "helpers/align";
 @import "helpers/width";
