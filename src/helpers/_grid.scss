@@ -50,7 +50,6 @@
 
 }
 
-
 .g-push {
     @for $i from 1 through 12 {
         $row: calc(12 / #{$i});

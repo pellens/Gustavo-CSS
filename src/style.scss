@@ -1,5 +1,12 @@
 @use "sass:math";
 
+$breakpoints:
+    "huge" 1200px,
+    "large" 900px,
+    "default" 750px,
+    "small" 600px,
+    "tiny" 450px;
+
 $spacingSizes: 1,2,3,4,5;
 $spacingDirs:
     "top" "t",

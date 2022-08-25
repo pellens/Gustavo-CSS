@@ -845,6 +845,7 @@ input[type=reset]:hover {
   padding: 0 calc(var(--tag-size-default) / 4);
   background-color: var(--color-default);
   border-radius: var(--tag-border-radius);
+  white-space: nowrap;
 }
 .g-tag:before {
   content: " ";
@@ -908,6 +909,107 @@ input[type=reset]:hover {
 .g-tag--huge {
   height: var(--tag-size-huge);
   padding: 0 calc(var(--tag-size-huge) / 3);
+}
+.g-tag-outline {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0 calc(var(--tag-size-default) / 4);
+  white-space: nowrap;
+  height: 1.75rem;
+}
+.g-tag-outline:before {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: var(--color-default);
+  margin-right: calc(var(--tag-size-default) / 4);
+}
+.g-tag-outline--default:before {
+  background-color: var(--color-default);
+}
+.g-tag-outline--primary:before {
+  background-color: var(--color-primary);
+}
+.g-tag-outline--secondary:before {
+  background-color: var(--color-secondary);
+}
+.g-tag-outline--error:before {
+  background-color: var(--color-error);
+}
+.g-tag-outline--success:before {
+  background-color: var(--color-success);
+}
+.g-tag-outline--warning:before {
+  background-color: var(--color-warning);
+}
+.g-tag-outline--border:before {
+  background-color: var(--color-border);
+}
+.g-tag-outline--tiny {
+  height: var(--tag-size-tiny);
+  padding: 0 calc(var(--tag-size-tiny) / 3);
+}
+.g-tag-outline--small {
+  height: var(--tag-size-small);
+  padding: 0 calc(var(--tag-size-small) / 3);
+}
+.g-tag-outline--default {
+  height: var(--tag-size-default);
+  padding: 0 calc(var(--tag-size-default) / 3);
+}
+.g-tag-outline--big {
+  height: var(--tag-size-big);
+  padding: 0 calc(var(--tag-size-big) / 3);
+}
+.g-tag-outline--huge {
+  height: var(--tag-size-huge);
+  padding: 0 calc(var(--tag-size-huge) / 3);
+}
+.g-tag-symbol {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0 calc(var(--tag-size-default) / 4);
+  white-space: nowrap;
+  height: 1.75rem;
+}
+.g-tag-symbol:before {
+  content: attr(data-symbol);
+  width: 10px;
+  color: var(--color-default);
+  margin-right: calc(var(--tag-size-default) / 8);
+  text-align: center;
+}
+.g-tag-symbol--default:before {
+  color: var(--color-default);
+}
+.g-tag-symbol--primary:before {
+  color: var(--color-primary);
+}
+.g-tag-symbol--secondary:before {
+  color: var(--color-secondary);
+}
+.g-tag-symbol--error:before {
+  color: var(--color-error);
+}
+.g-tag-symbol--success:before {
+  color: var(--color-success);
+}
+.g-tag-symbol--warning:before {
+  color: var(--color-warning);
+}
+.g-tag-symbol--border:before {
+  color: var(--color-border);
 }
 
 .g-link {
@@ -1378,11 +1480,61 @@ input[type=reset]:hover {
 .g-display-flex {
   display: flex;
 }
+@media only screen and (max-width: 1200px) {
+  .g-display-flex--huge {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .g-display-flex--large {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .g-display-flex--default {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .g-display-flex--small {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .g-display-flex--tiny {
+    display: flex;
+  }
+}
 .g-display-block {
   display: block;
 }
 .g-display-none {
   display: none;
+}
+@media only screen and (max-width: 1200px) {
+  .g-display-none--huge {
+    display: none;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .g-display-none--large {
+    display: none;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .g-display-none--default {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .g-display-none--small {
+    display: none;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .g-display-none--tiny {
+    display: none;
+  }
 }
 .g-space-between {
   justify-content: space-between;

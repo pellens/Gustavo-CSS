@@ -9,6 +9,7 @@
         padding: 0 calc( var(--tag-size-default) / 4); 
         background-color: var(--color-default);
         border-radius: var(--tag-border-radius);
+        white-space: nowrap;
 
         &:before {
             content:' ';
@@ -31,6 +32,72 @@
             &--#{$title} {
                 height: var(--tag-size-#{$title});
                 padding: 0 calc( var(--tag-size-#{$title}) / 3); 
+            }
+        }
+    }
+
+    &-tag-outline {
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .75rem;
+        font-weight: 500;
+        padding: 0 calc( var(--tag-size-default) / 4); 
+        white-space: nowrap;
+        height: 1.75rem;
+
+        &:before {
+            content:' ';
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            background-color: var(--color-default);
+            margin-right: calc( var(--tag-size-default) / 4); 
+        }
+
+        @each $title, $bg, $txt in $colors {
+            &--#{$title} {
+                &:before {
+                    background-color: var(--color-#{$title});
+                }
+            }
+        }
+
+        @each $title, $size in $sizesTags {
+            &--#{$title} {
+                height: var(--tag-size-#{$title});
+                padding: 0 calc( var(--tag-size-#{$title}) / 3); 
+            }
+        }
+    }
+
+    &-tag-symbol {
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .75rem;
+        font-weight: 500;
+        padding: 0 calc( var(--tag-size-default) / 4); 
+        white-space: nowrap;
+        height: 1.75rem;
+
+        &:before {
+            content: attr(data-symbol);
+            width: 10px;
+            color: var(--color-default);
+            margin-right: calc( var(--tag-size-default) / 8); 
+            text-align: center;
+        }
+
+        @each $title, $bg, $txt in $colors {
+            &--#{$title} {
+                &:before {
+                    color: var(--color-#{$title});
+                }
             }
         }
     }

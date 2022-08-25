@@ -42,6 +42,12 @@
         <li><a href="#tables-column">Column table</a></li>
     </ul>
 
+    <h3>Tags</h3>
+    <ul>
+        <li><a href="#tags">Default</a></li>
+        <li><a href="#tags-sizes">Tags sizes</a></li>
+    </ul>
+
     <h3>Helpers</h3>
     <ul>
         <li><a href="#text-color">Text color</a></li>

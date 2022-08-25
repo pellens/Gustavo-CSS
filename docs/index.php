@@ -201,6 +201,50 @@
                     </div>
                 </section>
 
+                <!-- Tags -->
+                <section>
+
+                    <h3>Tags</h3>
+
+                    <h4 id="tags">Default tags</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/tags/tags.php");?>
+                    </div>
+
+                    <h4 id="tags-sizes">Tag sizes</h4>
+                    <div class="codePreview">
+                    <?php include("templates/components/tags/tags-sizes.php");?>
+                    </div>
+
+                </section>
+
+
+                <span class="g-tag-outline">Tagname</span>
+                <span class="g-tag-outline g-tag-outline--primary">Tagname</span>
+                <span class="g-tag-outline g-tag-outline--secondary">Tagname</span>
+                <span class="g-tag-outline g-tag-outline--success">Tagname</span>
+                <span class="g-tag-outline g-tag-outline--warning">Tagname</span>
+                <span class="g-tag-outline g-tag-outline--error">Tagname</span>
+                <span class="g-tag-outline g-tag-outline--default">Tagname</span>
+
+                <hr>
+
+                <span class="g-tag-outline g-tag-outline--tiny g-tag-outline--primary">Tagname</span>
+                <span class="g-tag-outline g-tag-outline--small g-tag-outline--primary">Tagname</span>
+                <span class="g-tag-outline g-tag-outline--default g-tag-outline--primary">Tagname</span>
+                <span class="g-tag-outline g-tag-outline--big g-tag-outline--primary">Tagname</span>
+                <span class="g-tag-outline g-tag-outline--huge g-tag-outline--primary">Tagname</span>
+
+                <hr>
+
+                <span data-symbol="#" class="g-tag-symbol">Tagname</span>
+                <span data-symbol="#" class="g-tag-symbol g-tag-symbol--primary">Tagname</span>
+                <span data-symbol="#" class="g-tag-symbol g-tag-symbol--secondary">Tagname</span>
+                <span data-symbol="#" class="g-tag-symbol g-tag-symbol--success">Tagname</span>
+                <span data-symbol="#" class="g-tag-symbol g-tag-symbol--warning">Tagname</span>
+                <span data-symbol="#" class="g-tag-symbol g-tag-symbol--error">Tagname</span>
+                <span data-symbol="#" class="g-tag-symbol g-tag-symbol--default">Tagname</span>
+
         <details class="g-collapse">
             <summary class="g-collapse__title">You can find this information here</summary>
             <div class="g-collapse__content">Long information about the detail.</div>
@@ -373,20 +417,6 @@
         <section>
 
             <h3>Links</h3>
-
-        </section>
-
-        <section>
-
-            <h3>Tags</h3>
-            
-            <div class="codePreview">
-            <?php include("templates/components/tags/tags.php");?>
-            </div>
-
-            <div class="codePreview">
-            <?php include("templates/components/tags/tags-sizes.php");?>
-            </div>
 
         </section>
 
@@ -668,6 +698,7 @@
                 top: 0;
                 height: 100%;
                 border-right: 1px solid #DDD;
+                overflow-y: auto;
             }
 
             .container aside ul {
