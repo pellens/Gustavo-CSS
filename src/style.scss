@@ -51,6 +51,7 @@ $colors:
     --font-size: 14px;
     --icon-size: 1.25rem;
     --font-family: 'Poppins', sans-serif;
+    --line-height: 1.5;
     --body-background: #FFF;
     --border-radius: 8px;
 
@@ -106,18 +107,17 @@ $colors:
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 1.5;
+    line-height: var(--line-height);
 }
 
 html {
-    font-size: var(--font-size);
-
     --text-color-normal: #0a244d;
     --text-color-light: #8cabd9;
   }
 
 /* General */
 body {
+    font-size: var(--font-size);
     background-color: var(--body-background);
     color: var(--text-color);
     font-family: var(--font-family);

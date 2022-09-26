@@ -3,6 +3,7 @@
 .g-grid {
     max-width: var(--grid-max-width);
     width: 100%;
+    margin: 0 auto;
 
     &--fullwidth {
         max-width: 100%;
