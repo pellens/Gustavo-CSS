@@ -12,10 +12,10 @@
                 border: 1px solid var(--color-border);
                 padding: .5rem 1rem;
                 height: 3rem;
-                vertical-align: text-top;
+                vertical-align: middle;
 
                 img {
-                    vertical-align: text-top;
+                    vertical-align: middle;
                 }
             }
 
@@ -27,6 +27,7 @@
         thead {
             th {
                 text-align: left;
+                vertical-align: middle;
             }
         }
 
